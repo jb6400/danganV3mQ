@@ -1,0 +1,209 @@
+*{
+  padding: 0px;
+  font-family: 'Dosis', sans-serif;
+  box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+nav > a {
+  color: #ff6be4;
+  text-decoration: none;
+  display: flex;
+  align-self: center;
+  font-size: 48pt;
+  font-style: bold;
+  padding-bottom: 10px;
+}
+
+nav > a:hover{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-self: center;
+}
+
+body{
+  background-color: black;
+  color: #ff6be4;
+}
+
+div img{
+  width: 100%;
+}
+
+.photo{
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  height: auto;
+}
+
+/*make each of the pictures even and into a nice grid*/
+.portrait{
+  display: inline-flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  width: 23%;
+}
+
+.portaitContainer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 2vmin;
+  overflow: hidden;
+  align-content: center;
+  outline: solid;
+}
+
+h1{
+  padding-right: 50px;
+  padding-left: 50px;
+  text-align: center;
+  font-style: bold;
+  grid-column-end: span 5;
+}
+
+/*what each text-heavy part has*/
+.content{
+  padding-right: 100px;
+  padding-left: 100px;
+  font-size: 18pt;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid #ff6be4;
+  border-radius: 50px;
+}
+
+.content > div {
+  width: 50%;
+  padding: 15px;
+}
+
+/*make sure nothing changes with the link properties*/
+
+.portraitContainer > a{
+  width: 24.5%;
+  height: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+  border: 0;
+}
+
+.portaitContainer > a:hover{
+  width: 24.5%;
+  height: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+  border: 0;
+}
+
+.portaitContainer > a:active{
+  width: 24.5%;
+  height: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+  border: 0;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #ff6be4;
+  text-decoration: none;
+  display: flex;
+  align-self: center;
+  font-size: 48pt;
+  font-style: bold;
+  padding-bottom: 10px;
+}
+
+.popup:hover{
+  color: white;
+}
+
+.popuptext{
+  font-size: 24pt;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: #ff6be4;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: -175%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+span > a{
+  color:#fdd6ff;
+  text-decoration: none;
+}
+
+span > a:hover{
+  color:white;
+  text-decoration: none;
+}
+
+span > a:visited{
+  color:#fdd6ff;
+  text-decoration: none;
+}
+
+span > a:active{
+  color:#fdd6ff;
+  text-decoration: none;
+}
