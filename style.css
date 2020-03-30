@@ -229,24 +229,24 @@ span > a:active{
   text-decoration: none;
 }
 
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 600px) {
   .portaitContainer{grid-template-columns: repeat(1, 1fr); grid-column-gap: 0vmin;}
   .portrait{width: 100%;}
   .para{grid-column-end: span 5;}
-  .content{padding-left: 0px; padding-right: 0px; grid-template-columns: repeat(1, 1fr);}
+  .content{padding-left: 0px; padding-right: 0px; grid-template-columns: repeat(1, 1fr); font-size: 24pt;}
   nav{grid-template-columns: repeat(1,1fr); grid-row-gap: 2vmin;}
   nav>a{align-self: center; border: 5px solid #ff6be4; border-radius: 50px;}
   .popup .popuptext{left:12%;}
   .popup{border: 5px solid #ff6be4; border-radius: 50px;}
 }
 
-/* @media only screen and (min-width:992px){
+@media only screen and (min-width:992px){
   .portaitContainer{grid-template-columns: repeat(4, 1fr); grid-column-gap: 2vmin;}
-  .portrait{}
-  .para{grid-column-end: span 5;}
-  .content{padding-left: 0px; padding-right: 0px; grid-template-columns: repeat(1, 1fr);}
-  nav{grid-template-columns: repeat(1,1fr); grid-row-gap: 2vmin;}
-  nav>a{align-self: center; border: 5px solid #ff6be4; border-radius: 50px;}
-  .popup .popuptext{left:12%;}
-  .popup{border: 5px solid #ff6be4; border-radius: 50px;}
-} */
+  .portrait{width: 100%;}
+  .para{grid-column-end: span 3;}
+  .content{padding-left: 25px; padding-right: 25px; grid-template-columns: repeat(6, 1fr);}
+  nav{grid-template-columns: repeat(3,1fr); grid-row-gap: 0vmin;}
+  nav>a{border: none;}
+  .popup .popuptext{left:-95%;}
+  .popup{border: none;}
+}
