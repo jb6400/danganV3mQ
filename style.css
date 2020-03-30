@@ -5,8 +5,8 @@
 }
 
 nav{
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
   justify-content: space-around;
 }
@@ -16,6 +16,7 @@ nav > a {
   text-decoration: none;
   display: flex;
   align-self: center;
+  justify-content: center;
   font-size: 48pt;
   font-style: bold;
   padding-bottom: 10px;
@@ -35,21 +36,34 @@ body{
 
 div img{
   width: 100%;
+  padding-top: 2vmin;
+}
+
+.col1{
+  display: grid;
+  grid-column-end: span 3;
 }
 
 .photo{
-  display: flex;
-  justify-content: flex-end;
-  width: 50%;
+  display: grid;
+  justify-content: center;
+  align-self: center;
+  /* grid-column-start: 3; */
+  grid-column-end: span 3;
+  /* width: 50%; */
+  /* width: 150vmin; */
   height: auto;
+  padding-bottom: 10px;
+  border: dashed;
 }
 
 /*make each of the pictures even and into a nice grid*/
 .portrait{
-  display: inline-flex;
+  display: grid;
   justify-content: space-around;
-  flex-wrap:wrap;
-  width: 23%;
+  /* flex-wrap:wrap; */
+   grid-column-end: span 1;
+  /* width: 23%;*/
 }
 
 .portaitContainer{
@@ -57,40 +71,46 @@ div img{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-row-gap: 2vmin;
+  grid-column-gap: 2vmin;
   overflow: hidden;
   align-content: center;
-  outline: solid;
+  /* outline: solid; */
+  justify-items: center;
 }
 
 h1{
-  padding-right: 50px;
-  padding-left: 50px;
+  /* padding-right: 50px; */
+  /* padding-left: 50px; */
   text-align: center;
   font-style: bold;
-  grid-column-end: span 5;
+  grid-column-end: span 6;
 }
 
 /*what each text-heavy part has*/
 .content{
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-bottom: 25px;
   font-size: 18pt;
-  display: flex;
+  display: inline-grid;
+  justify: center;
+  grid-template-columns: repeat(6, 1fr);
   justify-content: space-between;
   align-items: center;
   border: 5px solid #ff6be4;
   border-radius: 50px;
 }
 
-.content > div {
-  width: 50%;
+.para {
+  display: grid;
+  grid-column-end: span 3;
   padding: 15px;
 }
 
 /*make sure nothing changes with the link properties*/
 
 .portraitContainer > a{
-  width: 24.5%;
+  /* width: 24.5%; */
   height: auto;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -99,7 +119,7 @@ h1{
 }
 
 .portaitContainer > a:hover{
-  width: 24.5%;
+  /* width: 24.5%; */
   height: auto;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -108,7 +128,7 @@ h1{
 }
 
 .portaitContainer > a:active{
-  width: 24.5%;
+  /* width: 24.5%; */
   height: auto;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -132,6 +152,7 @@ h1{
   font-size: 48pt;
   font-style: bold;
   padding-bottom: 10px;
+  justify-content: center;
 }
 
 .popup:hover{
@@ -154,7 +175,7 @@ h1{
   position: absolute;
   z-index: 1;
   top: 125%;
-  left: -175%;
+  left: -95%;
   margin-left: -80px;
 }
 
@@ -206,4 +227,15 @@ span > a:visited{
 span > a:active{
   color:#fdd6ff;
   text-decoration: none;
+}
+
+@media only screen and (max-width : 768px) {
+  .portaitContainer{grid-template-columns: repeat(1, 1fr); grid-column-gap: 0vmin;}
+  .portrait{width: 100%;}
+  .para{grid-column-end: span 5;}
+  .content{padding-left: 0px; padding-right: 0px; grid-template-columns: repeat(1, 1fr);}
+  nav{grid-template-columns: repeat(1,1fr); grid-row-gap: 2vmin;}
+  nav>a{align-self: center; border: 5px solid #ff6be4; border-radius: 50px;}
+  .popup .popuptext{left:12%;}
+  .popup{border: 5px solid #ff6be4; border-radius: 50px;}
 }
